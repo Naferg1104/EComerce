@@ -1,0 +1,29 @@
+version: '3.4'
+
+services:
+  ecomerce.api.costumers:
+    image: ${DOCKER_REGISTRY-}ecomerceapicostumers
+    build:
+      context: .
+      dockerfile: EComerce.Api.Costumers\Dockerfile
+
+  ecomerce.api.orders:
+    image: ${DOCKER_REGISTRY-}ecomerceapiorders
+    build:
+      context: .
+      dockerfile: EComerce.Api.Orders\Dockerfile
+
+
+  ecomerce.api.products:
+    image: ${DOCKER_REGISTRY-}ecomerceapiproducts
+    build:
+      context: .
+      dockerfile: EComerce.Api.Products\Dockerfile
+
+
+  ecomerce.api.searchs:
+    image: ${DOCKER_REGISTRY-}ecomerceapisearchs
+    build:
+      context: .
+      dockerfile: EComerce.Api.Searchs\Dockerfile
+

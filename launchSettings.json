@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "Docker Compose": {
+      "commandName": "DockerCompose",
+      "commandVersion": "1.0",
+      "serviceActions": {
+        "ecomerce.api.costumers": "StartDebugging",
+        "ecomerce.api.orders": "StartDebugging",
+        "ecomerce.api.products": "StartDebugging",
+        "ecomerce.api.searchs": "StartDebugging"
+      }
+    }
+  }
+}

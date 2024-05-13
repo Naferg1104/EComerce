@@ -1,0 +1,32 @@
+version: '3.4'
+
+services:
+  ecomerce.api.costumers:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "6002:80"
+
+  ecomerce.api.orders:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "6003:80"
+
+
+  ecomerce.api.products:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "6001:80"
+
+
+  ecomerce.api.searchs:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - Services__Products=http://ecomerce.api.products
+      - Services__Costumers=http://ecomerce.api.costumers
+      - Services__Orders=http://ecomerce.api.orders
+    ports:
+      - "6004:80"
+
